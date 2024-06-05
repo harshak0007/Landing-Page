@@ -1,0 +1,124 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  font-family: 'Clash Display', sans-serif;
+}
+
+/* div.blob::before {
+  content: url('/blob.svg');
+  position: absolute;
+  top: -2rem;
+  left: 5rem;
+  z-index: -10;
+  opacity: 75%;
+  /* transform: rotate(); 
+} */
+
+div.blob {
+  /* --size: 15rem; */
+  /* all: unset;
+    content: ''; */
+  /* width: var(--size);
+  height: var(--size); */
+  background: url('/blob.svg') no-repeat top/contain;
+  /* position: absolute; */
+  /* top: -1rem;
+    left: 5rem; */
+  z-index: -10;
+  opacity: 80%;
+}
+
+@media (max-width:425px) {
+  div.blob {
+    --size: 100%;
+    top: -1.5rem;
+    left: 20%;
+    width: calc(var(--size) + 20lvw);
+    height: calc(var(--size) + 10%);
+
+  }
+}
+
+img {
+  /* mix-blend-mode: ; */
+}
+
+
+.illustration::before {
+  content: '';
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: url('/illustration.svg') no-repeat center/cover;
+  /* background-color: red; */
+}
+
+div.download::after,
+div.download::before {
+  --size: 600px;
+  position: absolute;
+  content: '';
+  width: var(--size);
+  height: var(--size);
+  background: url('/illustration2.svg') no-repeat center/contain;
+  z-index: 0;
+}
+
+div.download::after {
+  /* top: -55%;
+  right: -20%; */
+  top: -100%;
+  right: -100%;
+}
+
+div.download::before {
+  /* bottom: -80%;
+  left: -30%; */
+  bottom: -110%;
+  left: -110%;
+}
+
+@media (min-width:425px) {
+  div.download::after {
+    top: -80%;
+    right: -90%;
+  }
+
+  div.download::before {
+    left: -90%;
+  }
+}
+
+@media (min-width:768px) {
+  div.download::after {
+    top: -55%;
+    right: -30%;
+  }
+
+  div.download::before {
+    bottom: -80%;
+    left: -40%;
+  }
+}
+
+@media (min-width:1024px) {
+  div.download::after {
+    top: -55%;
+    right: -20%;
+  }
+
+  div.download::before {
+    bottom: -80%;
+    left: -30%;
+  }
+}
+
+div {
+  /* border: 1px solid black; */
+}
